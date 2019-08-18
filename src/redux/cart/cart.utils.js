@@ -10,6 +10,5 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
         : cartItem
     );
   }
-  console.log(" not existing!!1");
   return [...cartItems, { ...cartItemToAdd, quantity: 1}];
 }; 
