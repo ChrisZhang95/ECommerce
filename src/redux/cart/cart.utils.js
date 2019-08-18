@@ -4,12 +4,12 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
   );
 
   if (existingCartItem) {
-    return cartItems.map(cartItem => 
+    return cartItems.map(cartItem =>
       cartItem.id === cartItemToAdd.id
-        ? { ...cartItem, quantitiy: cartItem.quantitiy + 1 }
-        : cartItem  
-    )
+        ? { ...cartItem, quantity: cartItem.quantity + 1 }
+        : cartItem
+    );
   }
-
+  console.log(" not existing!!1");
   return [...cartItems, { ...cartItemToAdd, quantity: 1}];
 }; 
